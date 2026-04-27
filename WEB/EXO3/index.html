@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <title>exo3</title>
+</head>
+<body>
+    <form action="">
+        <label for="">nom : </label>
+        <input type="text" id="nom"><br>
+
+        <label for="">age</label>
+        <input type="number" id="age"><br>
+
+        <label for="">sexe : </label>
+        <input type="radio" name="sexe" value="Homme" id="">Homme
+        <input type="radio" name="sexe" value="Femme" id="">Femme<br>
+
+       <label for="">loisir : </label>
+       <input type="checkbox" name="sport" value="foot">foot
+       <input type="checkbox" name="sport" value="basket">basket
+       <input type="checkbox" name="sport" value="tennis">tennis<br>
+
+       <label for="">pays : </label>
+       <select name="" id="pays">
+        <option value="">choisir</option>
+        <option value="senegal">senegal</option>
+        <option value="france">france</option>
+        <option value="japan">japan</option>
+       </select><br>
+          
+       <label for="">commentaire : </label><br><textarea name="" id="commentaire"></textarea>
+       <button type="button" class="btn" id="btn-envoie">soumettre</button>
+
+       <div class="resultat"></div>
+    </form>
+    
+    <script src="index.js"></script>
+</body>
+</html>

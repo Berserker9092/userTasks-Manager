@@ -1,0 +1,14 @@
+.carte {
+      width: 300px;
+      padding: 20px;
+      border: 1px solid black;
+      transition: 0.3s all ease-in-out;
+    }
+.carte:hover {
+      background-color: lightgreen;
+    }
+
+    input, textarea {
+      width: 100%;
+      margin-bottom: 10px;
+    }

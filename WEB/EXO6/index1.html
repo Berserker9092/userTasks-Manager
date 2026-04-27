@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestionnaire d'Utilisateurs et Tâches</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+    <main class="main-container">
+        <h1>Plateforme de Gestion</h1>
+
+        <div class="grid-layout">
+            
+            <section id="signup-container" class="card">
+                <h2>👤 Gestion des Comptes</h2>
+                
+                <div class="form-group">
+                    <input type="text" id="username" placeholder="Nom d'utilisateur">
+                    <input type="password" id="password" placeholder="Mot de passe">
+                    <div class="button-group">
+                        <button id="btn-register" class="btn-success">S'inscrire</button>
+                        <button id="btn-update" class="btn-warning">Modifier</button>
+                    </div>
+                </div>
+
+                <div class="modification"></div>
+
+                <button id="btn-list-users" class="btn-info">Afficher les utilisateurs</button>
+                
+                <div id="users-display-area" class="display-zone">
+                    </div>
+            </section>
+
+            <section class="task-container card">
+                <h2>📋 Ajouter une tâche</h2>
+                
+                <div class="form-group">
+                    <input type="text" id="task-title" placeholder="Titre de la tâche">
+                    <select id="user-select">
+                        <option value="">Choisir un utilisateur</option>
+                    </select>
+                    <button id="btn-add-task" class="btn-primary">Ajouter la tâche</button>
+                </div>
+
+                <hr>
+
+                <div id="filter-container">
+                    <h3>🔍 Filtrage</h3>
+                    <div class="filter-controls">
+                        <input type="text" id="search-user" placeholder="Nom de l'utilisateur...">
+                        <button id="btn-filter" class="btn-dark">Filtrer</button>
+                    </div>
+                    <button id="show" class="btn-outline">Tout afficher</button>
+                </div>
+
+                <div id="tasks-display-area" class="display-zone">
+                    </div>
+            </section>
+
+        </div>
+    </main>
+
+    <script src="index.js"></script>
+    <script src="taches.js"></script>
+</body>
+</html>

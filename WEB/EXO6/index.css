@@ -1,0 +1,166 @@
+#users-display-area {
+    margin-top: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    background-color: #f9f9f9;
+}
+
+#users-display-area li {
+    list-style: none;
+    padding: 5px 0;
+    border-bottom: 1px dashed #eee;
+}
+/* 1. CONFIGURATION GÉNÉRALE */
+:root {
+    --primary: #3498db;
+    --success: #2ecc71;
+    --warning: #f39c12;
+    --danger: #e74c3c;
+    --dark: #2c3e50;
+    --bg-color: #f0f2f5;
+    --card-bg: #ffffff;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--dark);
+    margin: 0;
+    padding: 20px;
+}
+
+.main-container {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+h1 {
+    text-align: center;
+    color: var(--dark);
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* 2. MISE EN PAGE RESPONSIVE (GRID) */
+.grid-layout {
+    display: grid;
+    /* La grille s'adapte : min 320px par colonne, sinon empilement */
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 25px;
+    align-items: start;
+}
+
+/* 3. STYLE DES CARTES */
+.card {
+    background: var(--card-bg);
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+    border: 1px solid #e1e4e8;
+}
+
+.card h2 {
+    margin-top: 0;
+    font-size: 1.4rem;
+    border-bottom: 2px solid var(--bg-color);
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+/* 4. FORMULAIRES ET INPUTS */
+.form-group, .filter-controls {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 15px;
+}
+
+input, select {
+    padding: 12px 15px;
+    border: 2px solid #edf2f7;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: border-color 0.3s;
+    width: 100%;
+    box-sizing: border-box; /* Important pour la responsivité */
+}
+
+input:focus, select:focus {
+    outline: none;
+    border-color: var(--primary);
+}
+
+/* 5. BOUTONS */
+button {
+    padding: 12px 18px;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 0.9rem;
+}
+
+button:hover {
+    filter: brightness(1.1);
+    transform: translateY(-1px);
+}
+
+.button-group {
+    display: flex;
+    gap: 10px;
+}
+
+.btn-primary { background-color: var(--primary); color: white; }
+.btn-success { background-color: var(--success); color: white; width: 100%; }
+.btn-warning { background-color: var(--warning); color: white; }
+.btn-info { background-color: var(--dark); color: white; width: 100%; margin-top: 10px; }
+.btn-dark { background-color: #5d6d7e; color: white; }
+.btn-outline { background-color: transparent; border: 2px solid var(--dark); color: var(--dark); margin-top: 10px; width: 100%; }
+
+/* 6. ZONES D'AFFICHAGE (DISPLAY ZONES) */
+.display-zone {
+    margin-top: 20px;
+    max-height: 400px;
+    overflow-y: auto; /* Scroll interne si trop de données */
+    padding-right: 5px;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    background: #f8fafc;
+    margin-bottom: 10px;
+    padding: 15px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-left: 4px solid var(--primary);
+}
+
+/* Style spécifique pour les boutons dans les listes */
+li button {
+    padding: 6px 12px;
+    font-size: 0.8rem;
+    margin-left: 5px;
+}
+
+/* 7. RESPONSIVITÉ MOBILE (MEDIA QUERIES) */
+@media (max-width: 480px) {
+    body {
+        padding: 10px;
+    }
+    
+    .card {
+        padding: 15px;
+    }
+
+    .button-group {
+        flex-direction: column; /* Boutons l'un sur l'autre sur petit mobile */
+    }
+}

@@ -1,0 +1,14 @@
+body {
+    font-family: Arial;
+    transition: 0.3s;
+}
+
+.clair {
+    background-color: white;
+    color: black;
+}
+
+.sombre {
+    background-color: black;
+    color: white;
+}

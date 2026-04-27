@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="texte">exo1</title>
+</head>
+<body>
+    <h1>exo1</h1>
+    <style>
+        body{
+            text-align: center;
+            width: 100px;
+            height: auto;
+            border: 1px solid black;
+            background-color: aqua;
+        }
+        h1{
+            color: red;
+        }
+        .rouge{
+            background-color: black;
+           color: green
+        }
+    </style>
+    <button onclick="ChangerTexte()">appuyer</button>
+    <script>
+         function ChangerTexte(){
+            titre = document.querySelector('h1')
+            titre.textContent = 'tu as clique'
+            titre.classList.add("rouge");
+            alert("je suis la")
+         }
+    </script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <title>Document</title>
+</head>
+<body>
+     <div id="signup-container">
+    <h2>Créer un compte</h2>
+    <input type="text" id="username" placeholder="Nom d'utilisateur">
+    <input type="password" id="password" placeholder="Mot de passe">
+    <button id="btn-register">S'inscrire</button><br><br>
+    <button id="btn-update" style="background-color: orange;">Modifier</button>
+    <div class="modification"></div>
+    <br><button id="btn-list-users">Afficher les utilisateurs</button>
+    <div class="task-container">
+        <h2>Ajouter une tache</h2>
+        <input type="text" id="task-title" placeholder="titre de la tache">
+        <select name="" id="user-select">
+            <option value="">choisir un utilisateur</option>
+        </select><br><br>
+        <button id="btn-add-task">Ajouter</button>
+        <button id="show">Afficher taches</button>
+    </div>
+<div id="users-display-area">
+    </div>
+<div id="tasks-display-area">
+    </div>
+</div><br>
+<div id="filter-container">
+    <input type="text" id="search-user" placeholder="Nom de l'utilisateur pour voir ses tâches">
+    <button id="btn-filter">Filtrer par utilisateur</button>
+</div>
+    <script src="index.js"></script>
+    <script src="taches.js"></script>
+</body>
+</html>
